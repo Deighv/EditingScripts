@@ -1,3 +1,4 @@
+REM Thanks to https://superuser.com/questions/1312811/ffmpeg-loudnorm-2pass-in-single-line
 REM cls
 REM echo off
 ffmpeg -i %1 -filter_complex "[0:a]loudnorm=I=-15:TP=-1.25:LRA=11:print_format=summary" -f null x 2>%1.txt
